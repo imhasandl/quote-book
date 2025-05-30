@@ -41,7 +41,6 @@ func main() {
 	router.HandleFunc("/quotes", apiConfig.CreateQuote).Methods("POST")
 	router.HandleFunc("/quotes", apiConfig.GetQuotes).Methods("GET")
 	router.HandleFunc("/quotes/random", apiConfig.RandomQuote).Methods("GET")
-	router.HandleFunc("/quotes", apiConfig.FilterByAuthor).Methods("GET") 
 	router.HandleFunc("/quotes/{id}", apiConfig.DeleteQuote).Methods("DELETE")
 
 	srv := &http.Server{
