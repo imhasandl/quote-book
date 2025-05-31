@@ -121,7 +121,7 @@ Deletes quote who has this id.
 
 ---
 
-## Run test for http handlers
+## Run tests for http handlers
 
 ```bash
 go test ./...
