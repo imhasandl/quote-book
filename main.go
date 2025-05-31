@@ -34,7 +34,7 @@ func main() {
 	}
 	defer database.CloseDatabase()
 
-	apiConfig := handlers.NewConfig(database.DB)
+	apiConfig := handlers.NewConfig(&database.DBQueries{DB: database.DB})
 
 	router := mux.NewRouter()
 	

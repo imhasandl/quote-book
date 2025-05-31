@@ -80,6 +80,9 @@ This service uses Goose for database migrations, before setting up migration cd 
 # Install Goose
 go install github.com/pressly/goose/v3/cmd/goose@latest
 
+# Go inside database/migrations where the files located
+cd database/migrations
+
 # Run migrations
 goose postgres "YOUR_DB_CONNECTION_STRING" up
 ```

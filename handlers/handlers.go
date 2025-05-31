@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"context"
-	"database/sql"
 	"encoding/json"
 	"math/rand"
 	"net/http"
@@ -15,12 +14,12 @@ import (
 )
 
 type apiConfig struct {
-	db *database.DBQueries
+	db database.DBInterface
 }
 
-func NewConfig(db *sql.DB) *apiConfig {
+func NewConfig(db database.DBInterface) *apiConfig {
 	return &apiConfig{
-		db: &database.DBQueries{DB: db},
+		db: db,
 	}
 }
 

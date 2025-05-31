@@ -10,7 +10,7 @@ import (
 )
 
 type DBInterface interface {
-	InsertQuote(ctx context.Context, params CreateQuoteParams) (*models.Quote, error)
+	InsertQuote(ctx context.Context, params CreateQuoteParams) (models.Quote, error)
 	GetAllQuotes(ctx context.Context) ([]models.Quote, error)
 	GetQuotesByFilter(ctx context.Context, filter string) ([]models.Quote, error)
 	DeleteQuote(ctx context.Context, id int) error
