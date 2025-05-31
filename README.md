@@ -121,8 +121,69 @@ Deletes quote who has this id.
 
 ---
 
+## Run test for http handlers
 
+```bash
+go test ./...
+```
 
+## Test http request using curl commands
+
+## Create a quote
+
+```bash
+curl -X POST http://localhost:8080/quotes \
+  -H "Content-Type: application/json" \
+  -d '{"author":"Confucius", "quote":"Life is simple, but we insist on making it complicated."}'
+```
+
+**Example response:**
+```json
+{
+  "id": 1,
+  "author": "Confucius",
+  "quote": "Life is simple, but we insist on making it complicated."
+}
+```
+
+---
+
+### Get all quotes
+
+```bash
+curl http://localhost:8080/quotes
+```
+
+---
+
+### Get a random quote
+
+```bash
+curl http://localhost:8080/quotes/random
+```
+
+---
+
+### Get quotes by author
+
+```bash
+curl http://localhost:8080/quotes?author=Confucius
+```
+
+---
+
+### Delete a quote by ID
+
+```bash
+curl -X DELETE http://localhost:8080/quotes/1
+```
+
+**Example response:**
+```json
+{
+  "status": true
+}
+```
 
 
 
