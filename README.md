@@ -70,7 +70,7 @@ CREATE DATABASE name_of_your_database;
 Create a `.env` file in the root directory with the following variables:
 
 ```env
-PORT=":YOUR_GRPC_PORT"
+PORT="YOUR_PORT"
 DB_URL="postgres://username:password@host:port/name_of_your_database?sslmode=disable"
 ```
 
